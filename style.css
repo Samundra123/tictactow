@@ -1,0 +1,130 @@
+/*--------------------------TYPOGRAPHY------------------*/
+
+/*------------------STANDARD STYYLING-------------- */
+
+@media (min-width: 1220px){
+	
+}
+
+@media(max-width: 1024px){
+
+}
+
+@media(min-width: 480px) and (max-width: 800px){
+
+}
+
+@media (max-width: 480px){
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+	
+}
+
+
+
+
+
+//Simple CSS
+
+
+body{
+	
+	text-align: center;
+	height:auto;
+
+}
+
+#box{
+	
+	width: 170px;
+	height: auto;
+	margin:10% 30% 30% 44%; 
+	background-color: #D4FFAA;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px #444;
+	padding: 10px;
+	padding-right:5px;
+	padding-bottom:5px;
+	
+
+
+}
+
+//The CSS# Magic Begins Here! TM 
+h3{
+	position: relative;
+	-webkit-animation:h3Animation 5s;
+	-moz-animation:h3Animation 5s;
+	-ms-animation:h3Animation 5s;
+
+}
+
+h1{
+	position: relative;
+	-webkit-animation:h1Animation 5s;
+	-moz-animation:h1Animation 5s;
+	-ms-animation:h1Animation 5s;
+}
+
+h2{
+	position: relative;
+	-webkit-animation:h2Animation 5s;
+}
+
+canvas{
+
+	position: relative;
+	-webkit-animation:canvasAnimation 5s;
+	background-color: #55AAFF;
+	border-radius: 5px;
+	box-shadow:0px 0px 20px #444;
+	color:#fff;
+}
+
+@-webkit-keyframes canvasAnimation{
+	0% {
+		-webkit-transform:rotate(90deg);left:0px;top:0px;
+	}
+}
+
+@-webkit-keyframes h1Animation{
+	0% {-webkit-transform:rotate(0deg)}
+	25% {-webkit-transform:rotate(90deg)}
+	50% {-webkit-transform:rotate(180deg)}
+	75% {-webkit-transform:rotate(270deg)}
+	100% {-webkit-transform:rotate(360deg)}
+}
+
+@-moz-keyframes h1Animation{
+	0% {-moz-transform:rotate(0deg)}
+	25% {-moz-transform:rotate(90deg)}
+	50% {-moz-transform:rotate(180deg)}
+	75% {-moz-transform:rotate(270deg)}
+	100% {-moz-transform:rotate(360deg)}
+}
+
+@-ms-keyframes h1Animation{
+	0% {-ms-transform:rotate(0deg)}
+	25% {-ms-transform:rotate(90deg)}
+	50% {-ms-transform:rotate(180deg)}
+	75% {-ms-transform:rotate(270deg)}
+	100% {-ms-transform:rotate(360deg)}
+}
+
+
+@-webkit-keyfreames h2Animation{
+
+	0% {-webkit-transform: scale(1,2);}
+	25% {-webkit-transform: scale(2,3);}
+	50% {-webkit-transform: scale(3,4);}
+	75% {-webkit-transform: scale(4,5);}
+	100% {-webkit-transform: scale(0,0);}
+}
+
+@-webkit-keyframes h3Animation{
+	0%  {-webkit-transform: scale(0,0);}
+	50%  {-webkit-transform: scale(0,0);}
+	100%  {-webkit-transform: scale(100,100);}
+}

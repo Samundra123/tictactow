@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="UTF-8">
+		<title>TIC TAK TOW</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+			<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=false";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+
+<script>
+	function cookiesit(){
+		var x=document.forms["myForm"]["email"].value;
+		
+			y= "email=heheparsad";
+			alert(y);
+			document.cookie="email=hehe";
+			alert(document.cookie);
+			
+	}
+</script>
+	</head>
+	<body   style="background:#FFFFAA;text-align: center;
+	height:auto;">
+		<header>
+    		<h1>Only </h1>
+    		<h2>MULtiply player</h2>
+    		<h3>Tic - Tac - Toe!</h3>
+    		<h4>Coz its interesting while palying with others</h4>
+  		</header>
+		<div id="box" >
+		
+		
+			<form   name="myForm" action="game.html"   method="post" onsubmit="return cookiesit()">
+				<input id="email" name="email" type="email" tabindex="2" value="" placeholder="something@hotmail.com">
+				<input type="submit" Value="submit" ;>
+
+
+
+			</form>
+			<div >
+	<p id="demo">See the Your location</p>
+
+		<button onclick="getLocation()">Show Location</button>
+
+		<div id="mapholder"></div>
+	</div>
+	
+</div>
+	</body>
+</html>
